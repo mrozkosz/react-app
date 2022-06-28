@@ -3,15 +3,16 @@ import PropTypes from 'prop-types';
 import Sidebar from 'components/molecules/Sidebar/Sidebar';
 
 
-const UserPageTemplate = ({ children }) => (
+const UserPageTemplate = ({ children, pageType }) => (
   <>
-    <Sidebar />
+    <Sidebar pageContext={pageType} />
     {children}
   </>
 );
 
 UserPageTemplate.prototype = {
   children: PropTypes.element.isRequired,
+  pageType: PropTypes.string.isRequired,
 };
 
 export default UserPageTemplate;

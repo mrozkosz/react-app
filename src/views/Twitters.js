@@ -9,7 +9,7 @@ const Twitters = ({ value, add, del }) => {
   };
 
   return (
-    <UserPageTemplate>
+    <UserPageTemplate pageType="twitter">
       <div>{value}</div>
       <button onClick={test}>+</button>
       <button onClick={del}>-</button>

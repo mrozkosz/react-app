@@ -73,11 +73,11 @@ const StyledLinkButton = styled.a`
     top:25px;
 `;
 
-const Card = ({ cardType }) => (
+const Card = ({ cardType, title, description }) => (
   <>
     <StyledWrapper>
       <InnerWrapper activeColor={cardType}>
-        <StyledHeading>Hellow</StyledHeading>
+        <StyledHeading>{title}</StyledHeading>
         <DateInfo>3 days</DateInfo>
 
         {cardType === CADR_TYPE.twitter && <StyledAvatar src="https://unavatar.io/twitter/jack" activeColor={cardType} />}
@@ -85,8 +85,8 @@ const Card = ({ cardType }) => (
 
       </InnerWrapper>
       <InnerWrapper flex>
-        <Paragraph>fwefwefewefwe</Paragraph>
-        <Button>ok</Button>
+        <Paragraph>{description}</Paragraph>
+        <Button secoundary>ok</Button>
       </InnerWrapper>
     </StyledWrapper>
   </>
@@ -94,10 +94,14 @@ const Card = ({ cardType }) => (
 
 Card.prototypes = {
   cardType: PropTypes.string,
+  title: PropTypes.string,
+  description: PropTypes.string,
 };
 
 Card.defaultProps = {
   cardType: CADR_TYPE.twitter,
+  title: 'Hellow',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
 };
 
 export default Card;
