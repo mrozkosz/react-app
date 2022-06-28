@@ -1,0 +1,15 @@
+{
+    "extends":["airbnb"],
+    "rules": {
+        "react/jsx-filename-extension": [1, { "extensions": [".js"] }]
+    },
+    "settings": {
+        "import/prefer-default-export": "off",
+        "import/no-unresolved": 1,
+        "import/resolver": {
+          "node": {
+            "extensions": [".js", ".jsx", ".ts", ".tsx"]
+          }
+        }
+      },
+}
