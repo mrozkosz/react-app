@@ -1,11 +1,11 @@
 import React from 'react';
 import UserPageTemplate from 'templates/UserPageTemplate';
 
-const Notes = () => (
+const Articles = () => (
   <UserPageTemplate>
-    <h1>Notes</h1>
+    <h1>Articles</h1>
   </UserPageTemplate>
 );
 
 
-export default Notes;
+export default Articles;

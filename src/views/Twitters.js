@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { increment, decrement } from 'store/usersReducer';
+import UserPageTemplate from 'templates/UserPageTemplate';
 
 const Twitters = ({ value, add, del }) => {
   const test = () => {
@@ -8,11 +9,11 @@ const Twitters = ({ value, add, del }) => {
   };
 
   return (
-    <>
+    <UserPageTemplate>
       <div>{value}</div>
       <button onClick={test}>+</button>
       <button onClick={del}>-</button>
-    </>
+    </UserPageTemplate>
   );
 };
 

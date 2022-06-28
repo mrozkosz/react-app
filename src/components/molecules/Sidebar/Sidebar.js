@@ -44,21 +44,35 @@ const StyledLinksList = styled.ul`
   list-style: none;
 `;
 
+const links = [
+  { to: '/', icon: penIcon, name: 'home' },
+  { to: '/twitters', icon: twitterIcon, name: 'twitters' },
+  { to: '/articles', icon: bulbIcon, name: 'articles' },
+];
+
 const Sidebar = ({ pageContext }) => (
   <StyledWrapper activeColor={pageContext}>
     <StyledLogoLink to="/" />
     <StyledLinksList>
-      <li>
-        <ButtonIcon as={NavLink} to="/notes" icon={penIcon} activeclass="active" />
-      </li>
-      <li>
-        <ButtonIcon as={NavLink} to="/twitters" icon={twitterIcon} activeclass="active" />
-      </li>
-      <li>
-        <ButtonIcon as={NavLink} to="/articles" icon={bulbIcon} activeclass="active" />
-      </li>
+
+      {links.map(item => (
+        <li key={`page_${item.name}`}>
+          <ButtonIcon
+            as={NavLink}
+            to={item.to}
+            icon={item.icon}
+            className={isActive => isActive || 'active'}
+          />
+        </li>
+      ))}
+
     </StyledLinksList>
-    <StyledLogoutButton as={NavLink} to="/login" icon={logoutIcon} />
+    <StyledLogoutButton
+      as={NavLink}
+      to="/login"
+      icon={logoutIcon}
+      className={isActive => isActive || 'active'}
+    />
   </StyledWrapper>
 );
 
