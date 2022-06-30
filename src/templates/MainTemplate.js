@@ -7,7 +7,7 @@ import { theme } from 'theme/mainTheme';
 
 
 const StyledWrapper = styled.div`
-  padding-left: 150px;
+  padding-left: 100px;
 `;
 
 const MainTemplate = ({ children }) => (

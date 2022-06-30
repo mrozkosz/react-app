@@ -13,7 +13,7 @@ const StyledWrapper = styled.nav`
   left: 0;
   top: 0;
   padding: 25px 0;
-  width: 150px;
+  width: 100px;
   height: 100vh;
   background-color: ${({ activeColor, theme }) => (activeColor ? theme[activeColor] : theme.note)};
   display: flex;

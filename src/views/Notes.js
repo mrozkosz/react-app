@@ -1,7 +1,7 @@
 import React from 'react';
 import UserPageTemplate from 'templates/UserPageTemplate';
 import Card from 'components/molecules/Card/Card';
-import styled from 'styled-components/dist/styled-components.browser.esm';
+import styled from 'styled-components';
 import Input from 'components/atoms/Input/Input';
 
 const StyledWrapped = styled.div`
@@ -20,6 +20,10 @@ const StyledCardWrapped = styled.div`
   
    @media only screen and (max-width: 1200px) {
     grid-template-columns: repeat(1, 1fr);
+  }
+  
+   @media only screen and (max-width: 550px) {
+    padding: 25px !important;
   }
 `;
 
